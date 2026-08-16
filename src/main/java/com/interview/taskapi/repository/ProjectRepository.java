@@ -16,8 +16,8 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
      * Both methods below collapse it to 1. Run this yourself once - being able to
      * say "I watched the query log go from 5 statements to 1" beats reciting theory.
      */
-    @EntityGraph(attributePaths = "tasks")
-    List<Project> findAllWithTasksEntityGraph();
+    @EntityGraph(attributePaths = {"tasks"})
+    List<Project> findAll();
 
     @Query("select distinct p from Project p left join fetch p.tasks")
     List<Project> findAllWithTasksFetchJoin();
