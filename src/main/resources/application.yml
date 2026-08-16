@@ -1,0 +1,68 @@
+# INTERVIEW: "Where can Spring Boot read configuration from, and who wins?"
+# Precedence (highest first, abbreviated):
+#   1. Command-line args (--server.port=9090)
+#   2. SPRING_APPLICATION_JSON
+#   3. OS environment variables (APP_MAX__TASKS__PER__PROJECT style)
+#   4. application-{profile}.yml     <- profile-specific beats plain
+#   5. application.yml
+#   6. @PropertySource
+#   7. Defaults in code
+spring:
+  application:
+    name: task-api
+  datasource:
+    url: jdbc:h2:mem:taskdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+  h2:
+    console:
+      enabled: true          # http://localhost:8080/h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create-drop  # NEVER in production. Say "Flyway/Liquibase" if asked.
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    # Required so data.sql runs AFTER Hibernate creates the schema.
+    defer-datasource-initialization: true
+
+# Our own typed config, bound by AppProperties. See @ConfigurationProperties.
+app:
+  max-tasks-per-project: 50
+  default-page-size: 20
+  quotes-base-url: https://dummyjson.com
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,beans,configprops,env,mappings
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true   # /actuator/health/readiness and /liveness -> k8s probes
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    # Uncomment to see bound parameters (great for demonstrating the N+1 problem):
+    # org.hibernate.orm.jdbc.bind: TRACE
+
+---
+# INTERVIEW: "How do profiles work?"
+# Activate with: --spring.profiles.active=prod  (or SPRING_PROFILES_ACTIVE=prod)
+spring:
+  config:
+    activate:
+      on-profile: prod
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics   # never expose /env or /beans publicly
