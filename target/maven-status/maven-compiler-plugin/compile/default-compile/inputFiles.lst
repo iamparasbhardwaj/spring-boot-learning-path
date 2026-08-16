@@ -1,0 +1,17 @@
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/TaskApiApplication.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/client/HttpClientConfig.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/client/QuoteClient.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/config/AppProperties.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/config/SecurityConfig.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/domain/Project.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/domain/Task.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/domain/TaskStatus.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/exception/TaskNotFoundException.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/repository/ProjectRepository.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/repository/TaskRepository.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/service/TaskService.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/web/ApiExceptionHandler.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/web/TaskController.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/web/dto/CreateTaskRequest.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/web/dto/TaskResponse.java
+/Users/parasbhardwaj/Documents/spring-boot-learning-path/src/main/java/com/interview/taskapi/web/dto/UpdateTaskRequest.java

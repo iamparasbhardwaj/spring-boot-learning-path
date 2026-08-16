@@ -1,0 +1,4 @@
+com/interview/taskapi/repository/TaskRepositoryTest.class
+com/interview/taskapi/service/TaskServiceTest.class
+com/interview/taskapi/web/TaskControllerTest.class
+com/interview/taskapi/SmokeTest.class
