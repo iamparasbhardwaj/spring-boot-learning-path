@@ -39,12 +39,12 @@ H2 console: `http://localhost:8080/h2-console` (JDBC URL `jdbc:h2:mem:taskdb`, u
 
 ---
 
-## The ordered topic list
+## The ordered topic list and details are present in [notes](https://github.com/iamparasbhardwaj/spring-boot-learning-path/tree/main/notes)
 
 Study in this order. Depth column: **must** = you will be asked, **should** = likely,
 **nice** = only if time remains. Each row points at the file in this repo that demonstrates it.
 
-### Tier 0 — Framing (30 min)
+### [Tier 0 — Framing (30 min)](https://github.com/iamparasbhardwaj/spring-boot-learning-path/tree/main/notes/Tier%200)
 
 | # | Topic | Depth | Where |
 |---|-------|-------|-------|
